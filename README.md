@@ -4,9 +4,9 @@
 
 ### Overview
 
-Creates a Kubernetes [cronjob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/) resource that runs on a schedule and checks all SSL certificates in the local cluster, and also all hostnames listed in a [hosts.txt](go/hosts.txt) file, to ensure that all have expiration dates at least [daysWarning](charts/cert-scanner/values.yaml) days in the future.
+Creates a Kubernetes [cronjob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/) resource in the monitoring namespace that runs on a schedule and checks all SSL certificates for hostnames listed in a [hosts.txt](go/hosts.txt) file, to ensure that all have expiration dates at least [daysWarning](charts/cert-scanner/values.yaml) days in the future.
 
-Any certificates with fewer than [daysWarning](charts/cert-scanner/values.yaml) days remaining will cause the job to fail.
+Any certificates with fewer than [daysWarning](charts/cert-scanner/values.yaml) days remaining will cause the job to log detailed errors in JSON format.
 
 ### Usage
 
