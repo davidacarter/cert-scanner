@@ -1,0 +1,4 @@
+apiVersion: v2
+name: cert-scanner
+description: A Helm chart for Kubernetes
+version: 1.0

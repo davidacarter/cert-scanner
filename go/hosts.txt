@@ -1,0 +1,3 @@
+www.cncf.io
+kubernetes.io
+helm.sh

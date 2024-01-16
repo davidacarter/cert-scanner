@@ -1,0 +1,5 @@
+image: repo.name/davidacarter/cert-scanner:latest
+schedule: "0 * * * *"
+successfulJobsHistoryLimit: 5
+failedJobsHistoryLimit: 5
+daysWarning: 21
